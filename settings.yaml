@@ -1,7 +1,7 @@
 apiVersion: v1alpha1
 kind: Setting
 metadata:
-  name: theme-pinboard-setting
+  name: theme-bento-setting
 spec:
   forms:
     - group: appearance

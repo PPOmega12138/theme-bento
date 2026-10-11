@@ -1,4 +1,4 @@
-# Halo Theme Pinboard
+# Halo Theme Bento
 
 以剪贴板为风格的二次元halo主题，正在制作中
 

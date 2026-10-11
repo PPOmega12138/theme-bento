@@ -1,18 +1,18 @@
 apiVersion: theme.halo.run/v1alpha1
 kind: Theme
 metadata:
-  name: theme-pinboard
+  name: theme-bento
 spec:
   displayName: Pinboard
   author:
     name: Your Name
     website: https://github.com/YourName
   description: A starter theme for Halo.
-  logo: /themes/theme-pinboard/assets/icon.svg
+  logo: /themes/theme-bento/assets/icon.svg
   homepage: https://github.com/halo-sigs/theme-astro-starter
   issues: https://github.com/halo-sigs/theme-astro-starter/issues
-  settingName: theme-pinboard-setting
-  configMapName: theme-pinboard-configMap
+  settingName: theme-bento-setting
+  configMapName: theme-bento-configMap
   version: "1.0.0"
   requires: ">=2.0.0"
   license:

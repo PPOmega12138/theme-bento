@@ -5,7 +5,7 @@ import vue from "@astrojs/vue";
 import Icons from "unplugin-icons/vite";
 
 export default defineConfig({
-  base: "/themes/theme-pinboard",
+  base: "/themes/theme-bento",
   build: {
     assets: "assets",
     format: "file",
