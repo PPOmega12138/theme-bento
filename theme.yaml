@@ -3,7 +3,7 @@ kind: Theme
 metadata:
   name: theme-bento
 spec:
-  displayName: Pinboard
+  displayName: Bento
   author:
     name: Your Name
     website: https://github.com/YourName
