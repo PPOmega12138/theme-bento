@@ -304,6 +304,11 @@ a.index-card:focus-visible,
     grid-row: 2/span 1;
 }
 
+.index-recent--item:nth-child(3){
+    grid-column: 4/span 1;
+    grid-row: 2/span 1;
+}
+
 .index-recent--item:not(:first-child) > a{
     position: absolute;
     inset: 0;
@@ -427,11 +432,10 @@ a.index-card:focus-visible,
 .index-card--moments{
     grid-column: 2;
     grid-row: 2;
-    justify-content: space-between;
 }
 
 .index-card--archives{
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 2;
 }
 
