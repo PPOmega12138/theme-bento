@@ -428,9 +428,10 @@ a.index-card:focus-visible,
 .index-card--life{
     grid-column: span 12;
     grid-row: span 4;
-    display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    grid-template-rows: auto minmax(0,1fr);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
     gap: 0.85rem;
     overflow: visible;
     padding: 0;
@@ -442,19 +443,22 @@ a.index-card:focus-visible,
     margin-top: 0.5rem;
 }
 
+.index-life--titlecard{
+    width: 100%;
+    margin: 0;
+    height: fit-content;
+}
+
 .index-card--photos{
-    grid-column: 1;
-    grid-row: 2;
+    width: calc((100% - 1.7rem) / 3);
 }
 
 .index-card--moments{
-    grid-column: 2;
-    grid-row: 2;
+    width: calc((100% - 1.7rem) / 3);
 }
 
 .index-card--archives{
-    grid-column: 3;
-    grid-row: 2;
+    width: calc((100% - 1.7rem) / 3);
 }
 
 .index-card--moments span,
