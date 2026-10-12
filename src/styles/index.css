@@ -396,6 +396,17 @@ a.index-card:focus-visible,
     color: var(--accent);
 }
 
+.index-recent--author{
+    font-size: 0.9rem;
+    margin-bottom: -0.2rem;
+    color: var(--ink-3);
+    transition: all 180ms ease;
+}
+
+.index-recent--categories:hover{
+    color: var(--accent);
+}
+
 .index-recent--excerpt{
     display: -webkit-box;
     margin: 0.25rem 0 0;

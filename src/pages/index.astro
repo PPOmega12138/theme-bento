@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
-import Calendar from "~icons/mingcute/calendar2-line"
+import Calendar from "~icons/mingcute/calendar2-line";
 ---
 
 <Layout contentClass="homepage">
@@ -54,7 +54,7 @@ import Calendar from "~icons/mingcute/calendar2-line"
 
     <section class="card index-card index-card--motto">
       <div class="index-motto--dates">
-        <Calendar class="index-motto--calendar"/>
+        <Calendar class="index-motto--calendar" />
 
         <time class="index-motto--date" id="current-date"></time>
         <span class="index-motto--weekday" id="current-weekday"></span>
@@ -101,13 +101,23 @@ import Calendar from "~icons/mingcute/calendar2-line"
           </a>
 
           <div class="index-recent--info">
-            <p
-              class="index-recent--categories"
-              th:text="${post.categories[0].spec.displayName}"
-              th:if="${not #lists.isEmpty(post.categories)}"
-            >
-              分类
-            </p>
+            <div>
+              <span
+                class="index-recent--categories"
+                th:text="${post.categories[0].spec.displayName}"
+                th:if="${not #lists.isEmpty(post.categories)}"
+              >
+                分类
+              </span>
+
+              <span
+                class="index-recent--author"
+                th:text="${post.owner.displayName}"
+                th:if="${post.owner}"
+              >
+                作者
+              </span>
+            </div>
 
             <p class="index-recent--title" th:text="${post.spec.title}">
               文章标题
@@ -117,8 +127,6 @@ import Calendar from "~icons/mingcute/calendar2-line"
             </p>
           </div>
         </div>
-
-        
       </div>
 
       <p class="index-card--empty" th:if="${#lists.isEmpty(posts.items)}">
@@ -144,13 +152,13 @@ import Calendar from "~icons/mingcute/calendar2-line"
       </a>
 
       <a
-          class="card index-card index-card--archives"
-          th:href="@{${site.routes.archivesUri}}"
-        >
-          <p class="index-card--eyebrow">ALL NOTES</p>
-          <h2>全部文章</h2>
-          <span>看看所有的文章&nbsp;→</span>
-        </a>
+        class="card index-card index-card--archives"
+        th:href="@{${site.routes.archivesUri}}"
+      >
+        <p class="index-card--eyebrow">ALL NOTES</p>
+        <h2>全部文章</h2>
+        <span>看看所有的文章&nbsp;→</span>
+      </a>
     </section>
   </section>
 </Layout>
