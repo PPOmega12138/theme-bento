@@ -249,6 +249,10 @@ a.index-card:focus-visible,
     transform: translateY(-0.25rem);
 }
 
+.index-recent--item:hover .index-recent--image{
+    transform: scale(1.05);
+}
+
 .index-recent--item:first-child{
     grid-column: 1/span 2;
     grid-row: 1/span 2;
@@ -304,7 +308,7 @@ a.index-card:focus-visible,
     grid-row: 2/span 1;
 }
 
-.index-recent--item:nth-child(3){
+.index-recent--item:nth-child(4){
     grid-column: 4/span 1;
     grid-row: 2/span 1;
 }
@@ -358,6 +362,7 @@ a.index-card:focus-visible,
     aspect-ratio: 4/3;
     border-radius: 0.75rem;
     object-fit: cover;
+    transition: all 180ms ease;
 }
 
 .index-recent--info a{
