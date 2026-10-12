@@ -101,27 +101,37 @@ import Calendar from "~icons/mingcute/calendar2-line";
           </a>
 
           <div class="index-recent--info">
-            <div>
-              <span
-                class="index-recent--categories"
-                th:text="${post.categories[0].spec.displayName}"
-                th:if="${not #lists.isEmpty(post.categories)}"
-              >
-                分类
-              </span>
-
-              <span
-                class="index-recent--author"
-                th:text="${post.owner.displayName}"
-                th:if="${post.owner}"
-              >
-                作者
-              </span>
-            </div>
 
             <p class="index-recent--title" th:text="${post.spec.title}">
               文章标题
             </p>
+
+            <div 
+              class="index-recent--smallInfo"
+            >
+              <span
+                class="index-recent--date"
+                th:text="${#dates.format(post.spec.publishTime,'yyyy-MM-dd')}"
+              ></span>
+              <a
+                class="index-recent--categories"
+                th:text="${post.categories[0].spec.displayName}"
+                th:if="${not #lists.isEmpty(post.categories)}"
+                th:href="${post.categories[0].status.permalink}"
+              >
+                分类
+              </a>
+
+              <a
+                class="index-recent--author"
+                th:text="${post.owner.displayName}"
+                th:if="${post.owner}"
+                th:href="${post.owner.permalink}"
+              >
+                作者
+              </a>
+            </div>
+
             <p class="index-recent--excerpt" th:text="${post.status.excerpt}">
               摘要
             </p>
