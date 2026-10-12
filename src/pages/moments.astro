@@ -29,7 +29,7 @@ import "../styles/moments.css";
           th:src="${moment.owner.avatar}"
           class="moments-card-title__avatar"
         />
-        <div th:text="${moment.owner.name}" class="moments-card-title__name">
+        <div th:text="${moment.owner.displayName}" class="moments-card-title__name">
         </div>
         <div
           th:text="${#temporals.format(moment.spec.releaseTime, 'yyyy-MM-dd HH:mm')}"
