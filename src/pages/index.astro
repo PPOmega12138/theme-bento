@@ -6,7 +6,7 @@ import Calendar from "~icons/mingcute/calendar2-line"
 
 <Layout contentClass="homepage">
   <Fragment slot="head">
-    <title th:text="${site.title}"></title>
+    <title th:text="|${site.title} - ${site.subtitle}|"></title>
   </Fragment>
   <Fragment slot="background">
     <div
