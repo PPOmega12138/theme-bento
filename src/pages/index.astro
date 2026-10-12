@@ -150,12 +150,20 @@ import Calendar from "~icons/mingcute/calendar2-line";
         <h2 id="recent-notes-title">生活小记</h2>
       </div>
 
-      <a class="card index-card index-card--photos" th:href="@{/photos}">
+      <a 
+        class="card index-card index-card--photos" 
+        th:href="@{/photos}"
+        th:if="${pluginFinder.available('PluginPhotos')}"
+      >
         <p class="index-card--eyebrow">ALBUMS</p>
         <h2>相册</h2>
       </a>
 
-      <a class="card index-card index-card--moments" th:href="@{/moments}">
+      <a 
+        class="card index-card index-card--moments" 
+        th:href="@{/moments}"
+        th:if="${pluginFinder.available('PluginMoments')}"
+      >
         <p class="index-card--eyebrow">MOMENTS</p>
         <h2>动态</h2>
         <span>最近发生了什么&nbsp; →</span>
